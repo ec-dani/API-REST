@@ -9,7 +9,7 @@ function createToken(user) {
     // eslint-disable-next-line no-underscore-dangle
     sub: user._id,
     iat: moment().unix(),
-    exp: moment().add(1, 'minute').unix(),
+    exp: moment().add(1, 'days').unix(),
   };
   return jwt.encode(playload, config.SECRET_TOKEN);
 }

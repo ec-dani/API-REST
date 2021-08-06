@@ -3,7 +3,6 @@ const User = require('../models/user');
 const usuariomidd = require('../middlewares/usuarioMidd');
 
 function createUser(req, res) {
-  console.log(req.body);
   const user = new User({
     email: req.body.email,
     displayName: req.body.displayName,
